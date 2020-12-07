@@ -12,4 +12,8 @@ Due to the projects being small and insignificant, once they are added, they are
 - Python
 - C++
 
-
+# Projects
+## password
+This is a simple program that asks for the desired length of a password, and prints a string of random characters of the given length. It will ask if you want another password before closing
+## fizzbang
+This program gives the result of a game of fizzbang for the first 1000 moves. It will prompt you to enter the integers for which multiples are called fizz or bang.
