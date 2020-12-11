@@ -1,4 +1,4 @@
-# projects
+# Projects
 
 The files in this repository are simple, learning projects.
 
