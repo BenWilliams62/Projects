@@ -22,3 +22,7 @@ This program parses the maze, and finds dead ends. Once dead ends are found, the
 Further possible additions include:
 - using djikstra's algorithm to find the shortest route
 - C++ maze solver asking for inputs and giving the ouput in the same format as the python script.
+## Pin lock
+This program asks the user for a code, then depending on the validity of the code prints a message. It can be easily adjusted to open a real lock, however, i left this to the individual user so as to not clutter the code unnecessarily.
+
+This will be edited in the future to add a GUI so as to create a usable product (on a device such as a raspberry pi), and may receive an app to edit users only on the back end (e.g. details cant be altered at the point of entering a pin, and all users are stored on an external databse).
