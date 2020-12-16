@@ -50,7 +50,7 @@ def main():
                 continue
             
             # set parameter for code length
-            if len(new_code) != 8:
+            if len(str(new_code)) != 8:
                 print("Invalid password length")
                 continue
 
