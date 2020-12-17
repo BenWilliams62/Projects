@@ -52,3 +52,12 @@ def print_tree(tree):
         print_tree(tree.get_left_child())
         print_tree(tree.get_right_child())
         print()
+
+class node:
+
+    # initialise
+    def __init__(self, value):
+        self.rootId = value
+        self.left = None
+        self.right = None
+
