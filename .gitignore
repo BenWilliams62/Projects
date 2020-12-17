@@ -13,3 +13,6 @@ PinLock/C++/main.dSYM/Contents/Info.plist
 PinLock/C++/main.dSYM/Contents/Resources/DWARF/main
 PinLock/Python/__pycache__/lock_system.cpython-39.pyc
 
+.DS_Store
+BinaryTree/Python/__pycache__/Tree.cpython-39.pyc
+.DS_Store
