@@ -16,3 +16,5 @@ PinLock/Python/__pycache__/lock_system.cpython-39.pyc
 .DS_Store
 BinaryTree/Python/__pycache__/Tree.cpython-39.pyc
 .DS_Store
+DjikstraTree/Python/__pycache__/djikstra.cpython-39.pyc
+DjikstraTree/Python/__pycache__/Graph.cpython-39.pyc
