@@ -26,3 +26,7 @@ Further possible additions include:
 This program asks the user for a code, then depending on the validity of the code prints a message. It can be easily adjusted to open a real lock, however, i left this to the individual user so as to not clutter the code unnecessarily.
 
 This will be edited in the future to add a GUI so as to create a usable product (on a device such as a raspberry pi), and may receive an app to edit users only on the back end (e.g. details cant be altered at the point of entering a pin, and all users are stored on an external databse).
+## Binary tree
+a simple program that can create binary trees
+## Dijkstra tree
+This program creates a graph of nodes, and then can find the shortest path from the start-point to the end-point. It will need to be optimised, and is far from a universal solution, however it was built to add on to my maze solving program
