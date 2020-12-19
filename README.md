@@ -18,9 +18,10 @@ This is a simple program that asks for the desired length of a password, and pri
 ## FizzBuzz
 This program gives the result of a game of fizzbuzz for the first 1000 moves. It will prompt you to enter the integers for which multiples are called fizz or buzz.
 ## Maze solver
-This program parses the maze, and finds dead ends. Once dead ends are found, they are blacked out. This continues until there are no more deadends. The resulting output will be the route (if a maze has loops or more than one route, then all possible paths will be shown). 
+This program parses the maze, and finds dead ends. Once dead ends are found, they are blacked out. This continues until there are no more deadends. The resulting output will be the route (if a maze has loops or more than one route, then all possible paths will be shown).
+In python, there are two maze solvers, one that finds dead ends, and the other uses dijkstra's algorithm to find the shortest route
 Further possible additions include:
-- using djikstra's algorithm to find the shortest route
+- using djikstra's algorithm to find the shortest route (in C++ too)
 - C++ maze solver asking for inputs and giving the ouput in the same format as the python script.
 ## Pin lock
 This program asks the user for a code, then depending on the validity of the code prints a message. It can be easily adjusted to open a real lock, however, i left this to the individual user so as to not clutter the code unnecessarily.
