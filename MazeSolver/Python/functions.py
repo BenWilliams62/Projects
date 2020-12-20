@@ -151,20 +151,10 @@ def check_up(nodes, maze, height):
         y = node.get_y_pos()
         path = 0
         
+        # while y is in the range of height of the maze, check if the next
+        # position is a 1, if it is, check for a node, if no node, continue. if a node
+        # break, and add edge to current node and found node
         while y > 0:
-            '''
-            if maze[y-1][x] >= 1:
-                y -= 1
-                path += 1
-            else:
-                if path == 0:
-                    break
-                else:
-                    for node_searched in nodes:
-                        if node_searched.get_x_pos() == x and node_searched.get_y_pos() == y:
-                            node.add_up_node(node_searched, path)
-                            break
-                    break'''
             breaking = 0
             if maze[y-1][x] >= 1:
                 y -= 1
@@ -193,19 +183,6 @@ def check_down(nodes, maze, height):
         path = 0
 
         while y < height-1:
-            '''
-            if maze[y+1][x] >= 1:
-                y += 1
-                path += 1
-            else:
-                if path == 0:
-                    break
-                else:
-                    for node_searched in nodes:
-                        if node_searched.get_x_pos() == x and node_searched.get_y_pos() == y:
-                            node.add_down_node(node_searched, path)
-                            break
-                    break'''
             breaking = 0
             if maze[y+1][x] >= 1:
                 y += 1
@@ -235,20 +212,6 @@ def check_left(nodes, maze, width):
         path = 0
 
         while x > 0:
-            '''
-            if maze[y][x-1] >= 1:
-                x -= 1
-                path += 1
-            else:
-                if path == 0:
-                    break
-                else:
-                    for node_searched in nodes:
-                        if node_searched.get_x_pos() == x and node_searched.get_y_pos() == y:
-                            node.add_left_node(node_searched, path)
-                            break
-                    break'''
-            ''' test'''
             breaking = 0
             if maze[y][x-1] >= 1:
                 x -= 1
@@ -279,19 +242,6 @@ def check_right(nodes, maze, width):
         path = 0
 
         while x < width-1:
-            '''
-            if maze[y][x+1] >= 1:
-                x += 1
-                path += 1
-            else:
-                if path == 0:
-                    break
-                else:
-                    for node_searched in nodes:
-                        if node_searched.get_x_pos() == x and node_searched.get_y_pos() == y:
-                            node.add_right_node(node_searched, path)
-                            break
-                    break'''
             breaking = 0
             if maze[y][x+1] >= 1:
                 x += 1
@@ -405,7 +355,6 @@ def djikstra(nodes):
 '''
 
 def colour_maze(nodes, maze):
-    print("maze called")
     for i in range(len(nodes)-1):
         # get x and y position for node and next node
         x_1 = nodes[i].get_x_pos()
@@ -426,5 +375,4 @@ def colour_maze(nodes, maze):
             for j in range(y_1, y_2+1):
                 maze[j][x_1] = 2
         
-    print("maze coloured")
     return maze
