@@ -169,34 +169,6 @@ def check_up(nodes, maze, height):
             else:
                 break
 
-'''
-#   #   #   #   #   #   #   #   #
-# check down for connections    #
-#   #   #   #   #   #   #   #   #
-'''
-
-def check_down(nodes, maze, height):
-    # for every node, check down for another node
-    for node in  nodes:
-        x = node.get_x_pos()
-        y = node.get_y_pos()
-        path = 0
-
-        while y < height-1:
-            breaking = 0
-            if maze[y+1][x] >= 1:
-                y += 1
-                path += 1
-                for node_searched in nodes:
-                    if node_searched.get_x_pos() == x and node_searched.get_y_pos() == y:
-                        node.add_down_node(node_searched, path)
-                        breaking = 1
-                        break
-                if breaking == 1:
-                    break
-            else:
-                break
-
 
 '''
 #   #   #   #   #   #   #   #   #
@@ -229,35 +201,6 @@ def check_left(nodes, maze, width):
 
 
 '''
-#   #   #   #   #   #   #   #   #
-# check right for connections   #
-#   #   #   #   #   #   #   #   #
-'''
-
-def check_right(nodes, maze, width):
-    # for every node, check right for another node
-    for node in  nodes:
-        x = node.get_x_pos()
-        y = node.get_y_pos()
-        path = 0
-
-        while x < width-1:
-            breaking = 0
-            if maze[y][x+1] >= 1:
-                x += 1
-                path += 1
-                for node_searched in nodes:
-                    if node_searched.get_x_pos() == x and node_searched.get_y_pos() == y:
-                        node.add_right_node(node_searched, path)
-                        breaking = 1
-                        break
-                if breaking == 1:
-                    break
-            else:
-                break
-
-
-'''
 #   #   #   #   #   #   #   #   #   #
 # check connections between nodes   #
 #   #   #   #   #   #   #   #   #   #
@@ -265,10 +208,8 @@ def check_right(nodes, maze, width):
 
 
 def connection_parse(nodes, maze, width, height):
-    check_up(nodes,maze,height)
-    check_down(nodes,maze,height)
-    check_left(nodes,maze,width)
-    check_right(nodes,maze,width)
+    check_up(nodes,maze,height) # dont need to check down, because it will have been connected in the up check
+    check_left(nodes,maze,width) # dont need to check right, because connections were made on the left check
 
 
 
