@@ -330,6 +330,7 @@ def djikstra(nodes):
             break
         
         unvisited_set.remove(current_node)
+        nodes.remove(current_node)
     
     # return the list of nodes visited
     return_list = []
@@ -344,6 +345,9 @@ def djikstra(nodes):
         else:
             return_list.append(current_node)
             break
+    
+    unvisited_set.clear()
+    nodes.clear
     
     return return_list[::-1]
 
@@ -376,3 +380,32 @@ def colour_maze(nodes, maze):
                 maze[j][x_1] = 2
         
     return maze
+
+'''
+#   #   #   #   #   #
+# dead end blocking #
+#   #   #   #   #   #
+'''
+
+def deadEndBlocking(maze, width, height):
+    changes = 0
+    for i in range(1, width-1):
+        for j in range(1, height-1):
+            if maze[j][i] == 1:
+                counter = 0
+
+                if maze[j+1][i] > 0.75:
+                    counter += 1
+                if maze[j-1][i] > 0.75:
+                    counter += 1
+                if maze[j][i+1] > 0.75:
+                    counter += 1
+                if maze[j][i-1] > 0.75:
+                    counter += 1
+                
+                if counter  == 1:
+                    maze[j][i] = 0.75
+                    changes += 1
+                    
+                
+    return maze, changes
