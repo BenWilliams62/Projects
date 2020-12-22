@@ -213,9 +213,8 @@ def connection_parse(nodes, maze, width, height):
     
     # split between two cores for faster processing
     with Pool(2) as pool:
-        pool.imap(check_up(nodes,maze,height), nodes)
-    #check_up(nodes,maze,height) # dont need to check down, because it will have been connected in the up check
-        pool.imap(check_left(nodes,maze,width), nodes) # dont need to check right, because connections were made on the left check
+        pool.imap(check_up(nodes,maze,height), nodes)   #check_up(nodes,maze,height) # dont need to check down, because it will have been connected in the up check
+        pool.imap(check_left(nodes,maze,width), nodes)  # dont need to check right, because connections were made on the left check
 
 
 
