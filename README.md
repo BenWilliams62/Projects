@@ -19,7 +19,7 @@ This is a simple program that asks for the desired length of a password, and pri
 This program gives the result of a game of fizzbuzz for the first 1000 moves. It will prompt you to enter the integers for which multiples are called fizz or buzz.
 ## Maze solver
 This program parses the maze, and finds dead ends. Once dead ends are found, they are blacked out. This continues until there are no more deadends. The resulting output will be the route (if a maze has loops or more than one route, then all possible paths will be shown).
-In python, there are two maze solvers, one that finds dead ends, and the other uses dijkstra's algorithm to find the shortest route
+In python, there are two maze solvers, one that finds dead ends, and the other uses dijkstra's algorithm to find the shortest route. This needs to be optimised further before being translated into C++.
 Further possible additions include:
 - using djikstra's algorithm to find the shortest route (in C++ too)
 - C++ maze solver asking for inputs and giving the ouput in the same format as the python script.
@@ -29,5 +29,4 @@ This program asks the user for a code, then depending on the validity of the cod
 This will be edited in the future to add a GUI so as to create a usable product (on a device such as a raspberry pi), and may receive an app to edit users only on the back end (e.g. details cant be altered at the point of entering a pin, and all users are stored on an external databse).
 ## Binary tree
 a simple program that can create binary trees
-## Dijkstra tree
-This program creates a graph of nodes, and then can find the shortest path from the start-point to the end-point. It will need to be optimised, and is far from a universal solution, however it was built to add on to my maze solving program
+
