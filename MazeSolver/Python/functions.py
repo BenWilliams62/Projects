@@ -1,3 +1,5 @@
+from multiprocessing import Pool
+
 '''
 #   #   #   #   #   #   #   #   #
 # object definistion for node   #
@@ -208,8 +210,11 @@ def check_left(nodes, maze, width):
 
 
 def connection_parse(nodes, maze, width, height):
-    check_up(nodes,maze,height) # dont need to check down, because it will have been connected in the up check
-    check_left(nodes,maze,width) # dont need to check right, because connections were made on the left check
+    # could split these into jobs for separate threads
+    with Pool(2) as pool:
+        pool.imap(check_up(nodes,maze,height), nodes)
+    #check_up(nodes,maze,height) # dont need to check down, because it will have been connected in the up check
+        pool.imap(check_left(nodes,maze,width), nodes) # dont need to check right, because connections were made on the left check
 
 
 
