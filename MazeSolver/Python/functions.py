@@ -68,6 +68,7 @@ class Node:
         node.up = self
         node.up_path = length
 
+    # functions to add data to the ndoe such as paths and node values
     def get_node(self):
         return self.rootName
 
@@ -105,7 +106,7 @@ class Node:
 # find all nodes    #
 #   #   #   #   #   #
 '''
-
+# parse the maze to find nodes. for each node, create a node object
 def node_parse(height, width, maze):
 
     # define start and end node
