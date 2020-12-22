@@ -210,7 +210,8 @@ def check_left(nodes, maze, width):
 
 
 def connection_parse(nodes, maze, width, height):
-    # could split these into jobs for separate threads
+    
+    # split between two cores for faster processing
     with Pool(2) as pool:
         pool.imap(check_up(nodes,maze,height), nodes)
     #check_up(nodes,maze,height) # dont need to check down, because it will have been connected in the up check

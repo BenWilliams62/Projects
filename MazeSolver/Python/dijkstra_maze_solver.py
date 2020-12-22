@@ -10,19 +10,25 @@ def main():
 
     # ask for image input
     mazePath = os.path.join(os.path.dirname(os.path.realpath(__file__)),"../Mazes/")
+    files = []
+    choice = 1
     for file in os.listdir(mazePath):
-        print(file)
+        files.append(file)
+        print(choice, "\t", file)
+        choice += 1
+
 
     # ask for input
-    mazeInput = str(input("\nWhich maze would you like solved?\n(type the name without the extension)\n"))
+    mazeInput = int(input("\nWhich maze would you like solved?\n(type the number)\n"))
     
     # start timer
     start_time = datetime.datetime.now()
 
     # turn image into array
-    image = Image.open(str(mazePath)+'/'+mazeInput+'.png')
+    image = Image.open(str(mazePath)+'/'+files[mazeInput-1])
     width, height = image.size
     maze = np.array(image)
+    print("file chosen: ", files[mazeInput-1])
 
     # block off all deadends - slower project but better memory management
     changes = 1
@@ -40,16 +46,14 @@ def main():
 
     # with nodes connected, find path
     route = djikstra(nodes)
-    nodes.clear()
-    print("route:")
+    nodes.clear()   # save some memory
     route_list = []
     for node in route:
         route_list.append(node.get_node())
     
-    print(route_list)
 
     # to present the maze, use an un altered maze
-    image = Image.open(str(mazePath)+'/'+mazeInput+'.png')
+    image = Image.open(str(mazePath)+'/'+files[mazeInput-1])
     width, height = image.size
     maze = np.array(image)
     solution = colour_maze(route, maze)
