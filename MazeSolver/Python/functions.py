@@ -2,7 +2,7 @@ from multiprocessing import Pool
 
 '''
 #   #   #   #   #   #   #   #   #
-# object definistion for node   #
+# object definitions for node   #
 #   #   #   #   #   #   #   #   #
 '''
 
