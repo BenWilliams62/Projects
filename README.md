@@ -11,6 +11,7 @@ Due to the projects being small and insignificant, once they are added, they are
 # Current languages
 - Python
 - C++
+- JavaScript
 
 # Projects
 ## Password
